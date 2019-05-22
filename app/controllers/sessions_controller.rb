@@ -6,12 +6,10 @@ class SessionsController < ApplicationController
       end
 
       session[:user_id] = @user.id
-
       render 'welcome/home'
     end
 
     private
-
     def auth
       request.env['omniauth.auth']
     end
